@@ -1,5 +1,5 @@
 import React from "react";
-
+import dots from "../assets/dots.png";
 const Workprocess = () => {
 	let work = [
 		{
@@ -22,40 +22,45 @@ const Workprocess = () => {
 		},
 	];
 	return (
-		<div className="md:container mx-auto my-14">
-			<div className="grid md:grid-cols-2">
-				{/* <img src="../assets/dots.png" alt="" /> */}
-				<div>
-					<h1 className="text-2xl font-light mb-2  text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-						Our Process
-					</h1>
-					<h1 className="text-5xl font-bold leading-tight mb-10">
-						Our work process make your dream true
-					</h1>
+		<div>
+			io
+			<div className="md:container mx-auto my-14 relative">
+				<img
+					src={dots}
+					className="absolute right-2 top-[-30px] z-[-100]"
+					alt=""
+				/>
+				<div className="grid md:grid-cols-2 ">
+					<div>
+						<h1 className="text-2xl font-light mb-2  ">Our Process</h1>
+						<h1 className="text-5xl font-bold leading-tight mb-10 text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-r from-sky-600 to-sky-900">
+							Our work process make your dream true
+						</h1>
 
-					{work.map((val) => (
+						{work.map((val) => (
+							<div
+								key={val.id}
+								style={{ width: "90%", background: val.color }}
+								className="grid grid-cols-12 py-5 pr-5 my-6 hover:shadow-md duration-300 ease-in-out rounded-xl "
+							>
+								<div className="col-span-2 flex justify-center items-center  ">
+									<h1 className="text-3xl font-bold">0{val.id}</h1>
+								</div>
+								<div className="col-span-10">
+									<h1 className="text-3xl font-bold mb-2 ">{val.title}</h1>
+									<p>{val.desc}</p>
+								</div>
+							</div>
+						))}
+					</div>
+					<div className="col-span-1 p-5">
 						<div
-							key={val.id}
-							style={{ width: "90%", background: val.color }}
-							className="grid grid-cols-12 py-5 pr-5 my-6 hover:shadow-md duration-300 ease-in-out rounded-xl "
-						>
-							<div className="col-span-2 flex justify-center items-center  ">
-								<h1 className="text-3xl font-bold">0{val.id}</h1>
-							</div>
-							<div className="col-span-10">
-								<h1 className="text-3xl font-bold mb-2 ">{val.title}</h1>
-								<p>{val.desc}</p>
-							</div>
-						</div>
-					))}
-				</div>
-				<div className="col-span-1 p-5">
-					<div
-						className="bg-zinc-700 h-[15rem] md:h-[40rem] col-span-10   bg-center lg:col-span-7 bg-cover rounded-xl"
-						style={{
-							backgroundImage: `url(https://img.freepik.com/free-photo/scandinavian-living-room-interior-design-zoom-background_53876-143147.jpg?w=996&t=st=1680377823~exp=1680378423~hmac=74252f9d5bd3b3577e4fc9fbf924ef9d5a95434254ee5fedbf05eac4bcb347e9)`,
-						}}
-					></div>
+							className="bg-zinc-700 h-[15rem] md:h-[40rem] col-span-10   bg-center lg:col-span-7 bg-cover rounded-xl"
+							style={{
+								backgroundImage: `url(https://img.freepik.com/free-photo/scandinavian-living-room-interior-design-zoom-background_53876-143147.jpg?w=996&t=st=1680377823~exp=1680378423~hmac=74252f9d5bd3b3577e4fc9fbf924ef9d5a95434254ee5fedbf05eac4bcb347e9)`,
+							}}
+						></div>
+					</div>
 				</div>
 			</div>
 		</div>

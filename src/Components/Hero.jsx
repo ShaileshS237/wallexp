@@ -1,6 +1,11 @@
 import React from "react";
 import background from "../assets/background.jpg";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const bg =
 	"https://img.freepik.com/free-photo/3d-rendering-loft-luxury-living-room-with-shelf-near-dining-table_105762-2050.jpg?w=1380&t=st=1681109763~exp=1681110363~hmac=4e90b358b91ee63fe4acb8426225aca104b50e235f7b8649c59890a72deb7906";
@@ -14,16 +19,20 @@ const Hero = () => {
 				<Swiper
 					spaceBetween={0}
 					slidesPerView={1}
+					navigation={true}
+					modules={[Navigation, Pagination]}
 					autoplay={{ delay: 1000 }}
+					pagination={true}
+					className="mySwiper"
 					onSlideChange={() => console.log("slide change")}
 					onSwiper={(swiper) => {
 						console.log(swiper);
 					}}
 				>
 					<SwiperSlide>
-						<div className="bg-gradient-to-t from-slate-900 h-[15rem] md:h-[40rem] w-full relative ">
+						<div className="bg-gradient-to-t from-sky-900 h-[15rem] md:h-[40rem] w-full relative ">
 							<img
-								src={bg}
+								src={bg2}
 								className="w-full h-full object-cover
 							absolute mix-blend-overlay"
 								alt=""
@@ -44,9 +53,9 @@ const Hero = () => {
 						</div>
 					</SwiperSlide>
 					<SwiperSlide>
-						<div className="bg-gradient-to-t from-slate-900 h-[15rem] md:h-[40rem] w-full relative ">
+						<div className="bg-gradient-to-t from-sky-900 h-[15rem] md:h-[40rem] w-full relative ">
 							<img
-								src={bg2}
+								src={bg}
 								className="w-full h-full object-cover
 							absolute mix-blend-overlay"
 								alt=""

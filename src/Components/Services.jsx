@@ -39,16 +39,14 @@ const Services = () => {
 		<div className="md:container md:mx-auto">
 			<div className=" my-14">
 				<div className="col-span-3 ">
-					<h1 className="text-2xl font-light mb-2  text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-						Service We Offer
-					</h1>
-					<h1 className="text-5xl font-bold leading-tight ">
+					<h1 className="text-2xl font-light mb-2  ">Service We Offer</h1>
+					<h1 className="text-5xl font-bold leading-tight text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-l from-sky-600 to-sky-900">
 						Transform Your Space: Discover Our Services Today!
 					</h1>
 				</div>
 				<div className="grid md:grid-cols-5 gap-5 my-5">
 					{services.map((services) => (
-						<div className="border-2 p-5 hover:bg-slate-200 hover:text-slate-900 duration-150 ease-in-out cursor-default rounded-xl">
+						<div className="border-2 border-sky-100 p-5 hover:bg-sky-50 hover:text-sky-900 duration-150 ease-in-out cursor-default rounded-xl">
 							<img src={services.icon} alt="" className="h-14 " />
 							<h1 className="mt-3 text-2xl  font-bold ">{services.name}</h1>
 							<h1 className="mt-1 text-1xl font-light">{services.desc}</h1>
