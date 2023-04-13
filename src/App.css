@@ -128,3 +128,51 @@
 	line-height: 1.4;
 	word-spacing: 100vw;
 }
+
+.swiper-button-next {
+	background-image: url(./assets/right.png);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	margin-right: 13px;
+	background-position: center;
+	height: 40px !important;
+	width: 40px !important;
+}
+
+.swiper-button-next::after {
+	display: none;
+}
+
+.swiper-button-prev {
+	background-image: url(./assets/right.png);
+	transform: rotate(180deg);
+	margin-left: 13px;
+	filter: saturate(3);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
+	height: 40px !important;
+	width: 40px !important;
+}
+
+.swiper-button-prev::after {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.swiper-button-prev {
+		height: 25px !important;
+		width: 25px !important;
+		margin-left: 3px;
+	}
+	.swiper-button-next {
+		height: 25px !important;
+		width: 25px !important;
+		margin-right: 3px;
+	}
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+	.swiper-pagination-bullet {
+	background-color: white;
+}

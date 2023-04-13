@@ -36,11 +36,11 @@ const services = [
 
 const Services = () => {
 	return (
-		<div className="md:container md:mx-auto">
-			<div className=" my-14">
+		<div className="md:container  md:mx-auto max-sm:px-4">
+			<div className=" my-5 md:my-14">
 				<div className="col-span-3 ">
 					<h1 className="text-2xl font-light mb-2  ">Service We Offer</h1>
-					<h1 className="text-5xl font-bold leading-tight text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-l from-sky-600 to-sky-900">
+					<h1 className="md:text-5xl text-3xl font-bold leading-tight text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-l from-sky-600 to-sky-900">
 						Transform Your Space: Discover Our Services Today!
 					</h1>
 				</div>
@@ -48,46 +48,14 @@ const Services = () => {
 					{services.map((services) => (
 						<div className="border-2 border-sky-100 p-5 hover:bg-sky-50 hover:text-sky-900 duration-150 ease-in-out cursor-default rounded-xl">
 							<img src={services.icon} alt="" className="h-14 " />
-							<h1 className="mt-3 text-2xl  font-bold ">{services.name}</h1>
-							<h1 className="mt-1 text-1xl font-light">{services.desc}</h1>
+							<h1 className="mt-3 md:text-2xl  font-bold ">{services.name}</h1>
+							<h1 className="mt-1 text-sm md:text-[15px] font-light">
+								{services.desc}
+							</h1>
 						</div>
 					))}
 				</div>
-				{/* <div>
-					<h1 className="text-2xl mb-2 font-bold">Interior Design</h1>
-					<p>
-						Our interior design services are here to help. Whether you're
-						looking to revamp a single room or redesign your entire space
-					</p>
-				</div> */}
 			</div>
-
-			{/* <div className="grid grid-cols-5 gap-4">
-				<div className="  p-3  w-auto">
-					<img
-						src="https://cdn-icons-png.flaticon.com/512/2984/2984892.png"
-						alt=""
-						className="h-14 "
-					/>
-					<h1 className="text-xl">Interior Design</h1>
-					<div>View More</div>
-				</div>
-			</div> */}
-
-			{/* <Swiper
-				className="my-10"
-				spaceBetween={50}
-				slidesPerView={3}
-				onSlideChange={() => console.log("slide change")}
-				onSwiper={(swiper) => console.log(swiper)}
-			>
-				<SwiperSlide>
-                    
-                </SwiperSlide>
-				<SwiperSlide>Slide 2</SwiperSlide>
-				<SwiperSlide>Slide 3</SwiperSlide>
-				<SwiperSlide>Slide 4</SwiperSlide>
-			</Swiper> */}
 		</div>
 	);
 };

@@ -2,14 +2,14 @@ import React from "react";
 import logo from "../assets/wa_logo.png";
 const Contact = () => {
 	return (
-		<div className="bg-gradient-to-b from-sky-600 to-sky-900 text-white p-10">
+		<div className="bg-gradient-to-b from-sky-600 to-sky-900 text-white max-sm:p-4 py-10">
 			<div className="md:container mx-auto">
 				<div>
 					<h1 className="text-4xl font-bold mb-5">
 						Let's <span className="special text-6xl font-light">level up </span>
 						your home, together.
 					</h1>
-					<div className="grid grid-cols-2 gap-10">
+					<div className="grid md:grid-cols-2 gap-10">
 						<div>
 							<form action="">
 								<div className="grid grid-cols-2 gap-5">
@@ -68,7 +68,7 @@ const Contact = () => {
 					</div>
 				</div>
 				<hr class="h-px mt-14 mb-10  bg-sky-200 border-0 " />
-				<div className="grid grid-cols-5 gap-5 justify-items-center">
+				<div className="grid md:grid-cols-5 gap-5 md:justify-items-center">
 					<div className="col-span-1">
 						<img src={logo} alt="" />
 					</div>

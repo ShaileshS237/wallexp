@@ -25,14 +25,13 @@ export const Testimonials = () => {
 	return (
 		<div className="py-[50px]">
 			<div>
-				<h1 className="text-4xl font-bold text-center leading-tight  mb-4">
+				<h1 className="md:text-4xl text-2xl font-bold text-center leading-tight  mb-4">
 					What Our Client Say's
 				</h1>
 				<img
 					src="https://www.pngall.com/wp-content/uploads/4/Quotation-Symbol-Transparent.png"
 					alt=""
-					className="center2"
-					width={60}
+					className="center2 w-[60px]"
 				/>
 				<div className="md:container mx-auto">
 					<Marquee speed={40}>
@@ -50,15 +49,15 @@ export const Testimonials = () => {
 								<SwiperSlide key={test.id}>
 									<div>
 										<div className="  text-center text-black inset-x-0 bottom-10">
-											<p className="mt-5 text-xl md:px-[20%]  font-thin">
+											<p className="mt-5 md:text-xl px-[5%] md:px-[20%]  font-thin">
 												Lorem ipsum dolor sit amet consectetur adipisicing elit.
 												Eveniet, ipsum deserunt. Nulla ex iure quidem eos iste
 												voluptates veritatis deserunt eveniet voluptatum
 												dignissimos tempore, reiciendis consectetur, recusandae
 												perferendis nisi, ratione sapiente suscipit?
 											</p>
-											<h1 className="text-xl font-bold mt-5">...</h1>
-											<h1 className="text-xl font-bold mt-5">
+											<h1 className="text-xl font-bold md:mt-5">...</h1>
+											<h1 className="text-xl font-bold md:mt-5">
 												Mr. {test.name}
 											</h1>
 											<h1 className="text-xl font-thin mt-1">{test.city}</h1>

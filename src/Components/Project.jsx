@@ -103,8 +103,8 @@ const Project = () => {
 	const [currentImage, SetCurrentImage] = useState(type[0].image);
 
 	return (
-		<div className="md:container mx-auto my-10">
-			<h1 className="text-4xl font-bold text-center leading-tight mb-7">
+		<div className="md:container max-sm:px-4 mx-auto my-10">
+			<h1 className="md:text-4xl text-2xl font-bold text-center leading-tight mb-7">
 				Our Portfolio
 			</h1>
 			<div className="grid md:grid-cols-5 gap-4">
@@ -114,7 +114,7 @@ const Project = () => {
 							SetCurrentImage(type[val.id - 1].image);
 						}}
 						key={val.id}
-						className={`text-center   rounded-xl border-2 p-5 cursor-pointer ${
+						className={`text-center hover:bg-sky-500 hover:text-sky-100  rounded-xl border-2 p-5 cursor-pointer ${
 							val.isActive ? "bg-slate-100 " : "bg-slate-100"
 						}`}
 					>
@@ -126,7 +126,14 @@ const Project = () => {
 			<Swiper
 				className="mt-10"
 				spaceBetween={50}
-				slidesPerView={3}
+				breakpoints={{
+					640: {
+						slidesPerView: 1,
+					},
+					1245: {
+						slidesPerView: 3,
+					},
+				}}
 				autoplay={{ delay: 1000 }}
 				onSlideChange={() => console.log("slide change")}
 				onSwiper={(swiper) => {

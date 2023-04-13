@@ -23,37 +23,36 @@ const Workprocess = () => {
 	];
 	return (
 		<div>
-			io
-			<div className="md:container mx-auto my-14 relative">
+			<div className="md:container max-sm:px-4 mx-auto md:my-14 my-6  relative">
 				<img
 					src={dots}
-					className="absolute right-2 top-[-30px] z-[-100]"
+					className="absolute right-2 max-sm:h-[20%] md:top-[-30px] bottom-[-30px] z-[-100]"
 					alt=""
 				/>
 				<div className="grid md:grid-cols-2 ">
 					<div>
 						<h1 className="text-2xl font-light mb-2  ">Our Process</h1>
-						<h1 className="text-5xl font-bold leading-tight mb-10 text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-r from-sky-600 to-sky-900">
+						<h1 className="md:text-5xl text-3xl font-bold leading-tight mb-10 text-[#584c3b] text-transparent  bg-clip-text bg-gradient-to-r from-sky-600 to-sky-900">
 							Our work process make your dream true
 						</h1>
 
 						{work.map((val) => (
 							<div
 								key={val.id}
-								style={{ width: "90%", background: val.color }}
-								className="grid grid-cols-12 py-5 pr-5 my-6 hover:shadow-md duration-300 ease-in-out rounded-xl "
+								style={{ background: val.color }}
+								className="grid grid-cols-12 py-5 pr-5 my-6 hover:shadow-md duration-300 ease-in-out rounded-xl md:w-[90%]"
 							>
 								<div className="col-span-2 flex justify-center items-center  ">
 									<h1 className="text-3xl font-bold">0{val.id}</h1>
 								</div>
 								<div className="col-span-10">
-									<h1 className="text-3xl font-bold mb-2 ">{val.title}</h1>
-									<p>{val.desc}</p>
+									<h1 className="md:text-3xl font-bold mb-2 ">{val.title}</h1>
+									<p className="max-sm:text-[13px]">{val.desc}</p>
 								</div>
 							</div>
 						))}
 					</div>
-					<div className="col-span-1 p-5">
+					<div className="col-span-1 md:p-5">
 						<div
 							className="bg-zinc-700 h-[15rem] md:h-[40rem] col-span-10   bg-center lg:col-span-7 bg-cover rounded-xl"
 							style={{

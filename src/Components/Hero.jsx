@@ -30,22 +30,22 @@ const Hero = () => {
 					}}
 				>
 					<SwiperSlide>
-						<div className="bg-gradient-to-t from-sky-900 h-[15rem] md:h-[40rem] w-full relative ">
+						<div className="bg-gradient-to-t from-yellow-900 h-[15rem] md:h-[40rem] w-full relative ">
 							<img
 								src={bg2}
 								className="w-full h-full object-cover
 							absolute mix-blend-overlay"
 								alt=""
 							/>
-							<div className="absolute  text-center text-white inset-x-0 bottom-10">
-								<h1 className=" text-7xl  font-bold  ">
+							<div className="absolute  text-center text-white inset-x-0 md:bottom-10 bottom-7">
+								<h1 className="text-2xl md:text-7xl  font-bold  ">
 									Design Home's Interior
 									<br />
 								</h1>
-								<h1 className="text-center  text-white text-7xl font-bold pt-4 ">
+								<h1 className="text-center  text-white text-2xl md:text-7xl  font-bold md:pt-4 ">
 									With Perfection
 								</h1>
-								<p className="mt-5 text-xl">
+								<p className="md:mt-5 md:text-xl text-[10px]">
 									Turn you room with panto a lot more minmaEst and rnodern with
 									ease and speed
 								</p>

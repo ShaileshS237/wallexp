@@ -5,6 +5,9 @@ module.exports = {
 		container: {
 			padding: "6rem",
 		},
+		container2: {
+			padding: "4rem",
+		},
 		extend: {
 			backgroundImage: {
 				"hero-pattern":
